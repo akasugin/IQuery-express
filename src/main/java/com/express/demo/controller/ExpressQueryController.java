@@ -9,7 +9,7 @@ import java.io.IOException;
 
 @RestController
 public class ExpressQueryController {
-    @RequestMapping(value = "/expressQuery", method = RequestMethod.POST)
+    @RequestMapping(value = "/expressQuery")
     public String expressQuery(@RequestBody String data) throws IOException {
         // 根据request创建Bot
         System.out.println(data);
