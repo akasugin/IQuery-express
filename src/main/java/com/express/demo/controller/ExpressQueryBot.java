@@ -86,9 +86,9 @@ public class ExpressQueryBot extends BaseBot{
                 // 询问槽位query_subject
                 ask("query_subject");
                 return askSubject();
-            } else if (getSlot("sys.number") == null) {
+            } else if (getSlot("sys_number") == null) {
                 // 询问快递单号槽位location
-                ask("sys.number");
+                ask("sys_number");
                 return askNumber();
             } else {
                 // 具体计算方法
@@ -183,7 +183,7 @@ public class ExpressQueryBot extends BaseBot{
         // 获取多轮槽位值：月薪值、城市信息、查询种类
 //        String subject = getSlot("query_subject");
         //快递单号数字部分
-        String number = getSlot("sys.number");
+        String number = getSlot("sys_number");
         //快递单号前的的字母
         String letter = "";
         if(getSlot("query_letter") != null)
