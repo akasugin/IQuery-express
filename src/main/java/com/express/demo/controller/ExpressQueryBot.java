@@ -135,8 +135,8 @@ public class ExpressQueryBot extends BaseBot{
         textCard.setAnchorText("setAnchorText");
         textCard.addCueWord("您的单号是多少呢?");
 
-        setSessionAttribute("key_1", "value_1");
-        setSessionAttribute("key_2", "value_2");
+        setSessionAttribute("query_subject", getSlot("query_subject"));
+//        setSessionAttribute("key_2", "value_2");
 
         OutputSpeech outputSpeech = new OutputSpeech(OutputSpeech.SpeechType.PlainText, "您的单号是多少呢?");
 
@@ -160,8 +160,8 @@ public class ExpressQueryBot extends BaseBot{
         textCard.addCueWord("您是想查快递么?");
 
         // 设置会话信息
-        setSessionAttribute("key_1", "value_1");
-        setSessionAttribute("key_2", "value_2");
+        setSessionAttribute("system_number", getSlot("system_number"));
+//        setSessionAttribute("key_2", "value_2");
 
         OutputSpeech outputSpeech = new OutputSpeech(OutputSpeech.SpeechType.PlainText, "您是想查快递么?");
 
@@ -227,8 +227,10 @@ public class ExpressQueryBot extends BaseBot{
         textCard.setAnchorText("setAnchorText");
         textCard.addCueWord("查询成功");
 
-        setSessionAttribute("key_1", "value_1");
-        setSessionAttribute("key_2", "value_2");
+//        setSessionAttribute("key_1", "value_1");
+//        setSessionAttribute("key_2", "value_2");
+        setSessionAttribute("query_subject", getSlot("query_subject"));
+        setSessionAttribute("system_number", getSlot("system_number"));
 
         OutputSpeech outputSpeech = new OutputSpeech(OutputSpeech.SpeechType.PlainText, ret);
 

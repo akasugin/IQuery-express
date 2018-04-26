@@ -24,6 +24,7 @@ public class ExpressQueryController {
         try {
 //            // 调用bot的run方法
             String responseJson = bot.run();
+            System.out.println(responseJson);
             return responseJson;
 //            // 设置response的编码UTF-8
 //            response.setCharacterEncoding("UTF-8");
